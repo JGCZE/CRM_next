@@ -5,15 +5,15 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.links}>
-        <Link href="/">
+        <Link href="/" className={styles.link}>
           <h1>Logo</h1>
         </Link>
-        <Link href="/kmen">Klientský kmen</Link>
-        <Link href="/discussed">About</Link>
+        <Link href="/kmen" className={styles.link}>Klientský kmen</Link>
+        <Link href="/discussed" className={styles.link}>About</Link>
       </div>
 
       <div>
-        <Link href="/login">Login</Link>
+        <Link href="/login" className={styles.link}>Login</Link>
       </div>
     </div>
   )

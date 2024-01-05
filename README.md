@@ -1,5 +1,17 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Co je hotovo
+1. založení projektu :))))
+2. Routing stránek
+3. Navbar + základní styly
+
+## Co budu dělat
+- 
+
+
+## Obecné poznámky
+- 
+
 ## Getting Started
 
 First, run the development server:
