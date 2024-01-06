@@ -4,9 +4,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 1. založení projektu :))))
 2. Routing stránek
 3. Navbar + základní styly
+4. načíst fake klienty
 
 ## Co budu dělat
-- 
+- základní stylování layoutu
+
+- napojení na MondoDB
+- login
+
 
 
 ## Obecné poznámky
