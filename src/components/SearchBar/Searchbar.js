@@ -6,7 +6,7 @@ const Searchbar = () => {
     <div className={styles.container}>
       <input type="text" placeholder="Search.." className={styles.input}/>
       <p>Tady bude filtr</p>
-      <Link href="/add"> Přidat klienta</Link>
+      <Link href="/add" className={styles.link}> Přidat klienta</Link>
     </div>
   )
 }

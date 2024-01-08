@@ -1,7 +1,18 @@
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(218, 170, 170);
-  color: white;
+  margin: 0 10px;
 }
+
+.links {
+  text-decoration: none;
+  color: black;
+}
+
+.links:nth-child(2n){
+  color: gray;
+}
+
+.links:hover {
+  color: blue;
+  font: bold;
+}
+

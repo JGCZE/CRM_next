@@ -1,6 +1,7 @@
 .container {
   width: 100%;
-  background-color: red;
+  background-color: rgb(5, 5, 81);
+  color: aliceblue;
   margin-top: 10px;
   display: flex;
 }
