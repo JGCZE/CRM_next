@@ -1,4 +1,6 @@
 import Searchbar from "@/components/SearchBar/Searchbar.js"
+import DescBar from "@/components/DescBar/page.jsx"
+import OneClient from "./components/OneClient.jsx"
 import data from "../../data/data.js"
 import styles from "./Kmen.module.css"
 
@@ -8,20 +10,10 @@ const Kmen = () => {
     <div>
       Kmen
       <Searchbar />
+      <DescBar />
       {data.map((client) => {
-        const { id, name, rank, servis, zp, majetek, hypo, invj, invm } = client;
         return (
-        <div key={id} className={styles.container}>
-          {/* Componenta klient */}
-          <p>{name}</p>
-          <p>{rank}</p>
-          <p>{servis}</p>
-          <p>{zp}</p>
-          <p>{majetek}</p>
-          <p>{hypo}</p>
-          <p>{invj}</p>
-          <p>{invm}</p>
-        </div>
+          <OneClient client={client} key={client.id}/>
         )
       })}
     </div>

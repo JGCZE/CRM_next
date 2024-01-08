@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  background-color: red;
+  margin-top: 10px;
+  display: flex;
+}
+
+.nameWrapper {
+  width: 20%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.descWrapper {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  width: 80%;
+}
+
+.descWrapper > * {
+  margin: 10px auto;
+  padding: 5px;
+  max-width: 100px;
+}
