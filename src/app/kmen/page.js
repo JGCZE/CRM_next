@@ -13,7 +13,7 @@ const Kmen = () => {
       <DescBar />
       {data.map((client) => {
         return (
-          <OneClient client={client} key={client.id}/>
+          <OneClient client={client} key={client.id} className={styles.client} />
         )
       })}
     </div>
