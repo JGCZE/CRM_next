@@ -14,7 +14,7 @@ const Kmen = () => {
       <DescBar />
       {data.map((client) => {
         return (
-          <Link key={client.id} href="/" className={styles.links}>
+          <Link key={client.id} href={`/kmen/${client.id}`} className={styles.links}>
             <OneClient client={client} className={styles.client} />
           </Link>
         )
