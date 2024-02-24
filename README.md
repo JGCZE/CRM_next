@@ -6,11 +6,14 @@ https://crm-next-flame.vercel.app
 2. Routing stránek
 3. Navbar + základní styly
 4. načíst fake klienty
+5. založení testovací dazabáze, clusteru
+6. načítání dat z databáze
+7. pro každého klienta vzniká nová komponenta
 
 ## Co budu dělat
 - základní stylování layoutu
-
-- napojení na MondoDB
+- ukládání dat do databáze
+- 2 databáze - A. Klient, B. Produkty přes [slug] = dvojí načítání
 - login
 
 
