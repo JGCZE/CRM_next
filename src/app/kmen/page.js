@@ -6,7 +6,7 @@ import data from "../../data/data.js"
 import styles from "./Kmen.module.css"
 import { getClient } from "../lib/data.js"
 
-const Kmen = async ({}) => {
+const Kmen = async () => {
   //console.log(data)
   const clients = await getClient()
   console.log(clients);

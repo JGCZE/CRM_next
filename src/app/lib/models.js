@@ -1,19 +1,19 @@
 import mongoose from "mongoose";
 
 const clientSchema = new mongoose.Schema({
-  firstName: {
+  name: {
     type:String,
     required:false,
     unique: false,
   },
-  lastName: {
+  rank: {
     type:String,
     required:true,
     unique: false,
     min:3,
     max:30,
   },
-  address: {
+  servis: {
     type:String,
     required:false,
     unique: false,
