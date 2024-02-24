@@ -1,7 +1,7 @@
 import React from 'react'
 
-const SpecificClient = ({params}) => {
-  console.log(params)
+const SpecificClient = ({ params }) => {
+  console.log("Param: "  + params)
   return (
     <div>
       
