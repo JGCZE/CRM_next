@@ -38,8 +38,11 @@ const clientSchema = new mongoose.Schema({
     type:String,
     required: false,
   },
+  address: {
+    type:String,
+    required: false,
+  },
 }, { timestamps: true})
 
 
 export const Client = mongoose.models.Client || mongoose.model("clients", clientSchema)
-export const Post = mongoose.models.Post || mongoose.model("Post", postSchema)

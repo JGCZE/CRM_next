@@ -15,3 +15,17 @@ export const getClient = async () => {
     throw new Error("FAIL")
   }
 }
+
+export const getOneClient = async (id) => {
+  try {
+    connectToDb()
+    const oneClient = await Client.findById(id)
+    console.log(oneClient + " ONE CLIENT");
+    return oneClient;
+
+  } catch (error) {
+    console.log(error);
+    console.log("failed to fetch !!!!");
+    throw new Error("FAIL")
+  }
+}
