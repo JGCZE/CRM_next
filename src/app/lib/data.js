@@ -6,7 +6,7 @@ export const getClient = async () => {
   try {
     connectToDb()
     const client = await Client.find()
-    console.log(client + "from data.js");
+    console.log("01");
     return client;
 
   } catch (error) {
@@ -20,7 +20,7 @@ export const getOneClient = async (id) => {
   try {
     connectToDb()
     const oneClient = await Client.findById(id)
-    console.log(oneClient + " ONE CLIENT");
+    console.log("O2");
     return oneClient;
 
   } catch (error) {
