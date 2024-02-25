@@ -1,10 +1,9 @@
 import { connectToDb } from "./utils";
 import { Client } from "./models";
-import { Post } from "./models"
 
 export const getClient = async () => {
   try {
-    connectToDb()
+    await connectToDb()
     const client = await Client.find()
     console.log("01");
     return client;
@@ -18,7 +17,7 @@ export const getClient = async () => {
 
 export const getOneClient = async (id) => {
   try {
-    connectToDb()
+    await connectToDb()
     const oneClient = await Client.findById(id)
     console.log("O2");
     return oneClient;
