@@ -9,7 +9,7 @@ export const connectToDb = async () => {
       console.log("using existing connection");
       return  
     }
-    const db = await mongoose.connect('mongodb+srv://jgcrm:passwordX@crm.e7yue04.mongodb.net/clients?retryWrites=true&w=majority');
+    const db = await mongoose.connect(process.env.MONGO);
     connection.isConnected = db.connections[0].readyState;
   } catch (error) {
     console.log(error);
