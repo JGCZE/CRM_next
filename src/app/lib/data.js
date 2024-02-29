@@ -1,12 +1,12 @@
 import { connectToDb } from "./utils";
 import { Client } from "./models";
 
-export const getClient = async () => {
+export const getOneClient = async (id) => {
   try {
     await connectToDb()
-    const client = await Client.find()
-    console.log("01");
-    return client;
+    const oneClient = await Client.findById(id)
+    console.log("O2");
+    return oneClient;
 
   } catch (error) {
     console.log(error);
@@ -15,12 +15,12 @@ export const getClient = async () => {
   }
 }
 
-export const getOneClient = async (id) => {
+export const getClient = async () => {
   try {
     await connectToDb()
-    const oneClient = await Client.findById(id)
-    console.log("O2");
-    return oneClient;
+    const client = await Client.find()
+    console.log("01");
+    return client;
 
   } catch (error) {
     console.log(error);
