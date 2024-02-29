@@ -3,12 +3,11 @@ import mongoose from "mongoose";
 const clientSchema = new mongoose.Schema({
   name: {
     type:String,
-    required:false,
+    required:true,
     unique: false,
   },
   rank: {
     type:String,
-    required:true,
     unique: false,
     min:3,
     max:30,
