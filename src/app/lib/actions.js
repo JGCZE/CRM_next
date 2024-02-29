@@ -11,7 +11,7 @@ export const addClient = async (client) => {
     await connectToDb()
     const newClient = new Client({ name, rank, servis, zp, majetek, hypo, invj, invm, address })
     await newClient.save()
-    console.log("Client added");
+    console.log("Client added ");
     revalidatePath("/kmen")
   } catch (error) {
     console.log(error);
