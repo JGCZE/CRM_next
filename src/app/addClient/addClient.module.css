@@ -1,0 +1,43 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-top: 30px;
+}
+
+.form input {
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+
+.numberSection {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.numberSection input {
+  width: 100%;
+  font-size: 16px;
+}
+
+.notesSection {
+  margin-top: 30px;
+}
+
+.button {
+  margin-top: 30px;
+  padding: 10px 0;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 10px;
+}
