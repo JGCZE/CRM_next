@@ -19,3 +19,7 @@ export const addClient = async (client) => {
     throw new Error("FAIL")
   }
 }
+
+export const deleteClient = async () => {
+  console.log("delete")
+}

@@ -8,9 +8,42 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  width: 70%;
 }
 
 .name {
   font-size: 1.5rem;
   font-weight: 600;
+  background-color: rgb(5, 5, 81);
+  color: white;
+  padding: 10px 40px;
+}
+
+.editBtn {
+  padding: 10px 30px;
+  background-color: #bada55;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  padding: 10px 30px;
+  background-color: rgb(255, 0, 0, 0.8);
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.backBtn {
+  padding: 10px 30px;
+  margin-left: 10%;
+  background-color: rgb(5, 5, 81);
+  color: white;
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
 }
