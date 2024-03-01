@@ -5,7 +5,7 @@ import Link from "next/link.js"
 import styles from "./Kmen.module.css"
 import { getClient } from "../lib/data.js"
 
-const Kmen = async ({}) => {
+const Kmen = async () => {
   const clients = await getClient()
 
   return (
@@ -13,13 +13,13 @@ const Kmen = async ({}) => {
       Kmen
       <Searchbar />
       <DescBar />
-      {clients.map((client) => {
-        return (
+      {clients.map((client) => (
+       
           <Link key={client.id} href={`/kmen/${client._id}`} className={styles.links}>
             <OneClient client={client} className={styles.client} />
           </Link>
-        )
-      })}
+      )
+      )}
     </div>
   )
 }
