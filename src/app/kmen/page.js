@@ -1,6 +1,6 @@
 import Searchbar from "@/components/SearchBar/Searchbar.js"
 import DescBar from "@/components/DescBar/page.jsx"
-import OneClient from "./components/OneClient.jsx"
+import OneClient from "@/components/OneClient/OneClient.jsx"
 import Link from "next/link.js"
 import styles from "./Kmen.module.css"
 import { getClient } from "../lib/data.js"
