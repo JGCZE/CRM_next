@@ -5,7 +5,7 @@ import Link from "next/link.js"
 import styles from "./Kmen.module.css"
 import { getClient } from "../lib/data.js"
 
-const Kmen = async () => {
+const Kmen = async ({}) => {
   const clients = await getClient()
 
   return (
