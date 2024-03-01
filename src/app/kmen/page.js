@@ -6,7 +6,7 @@ import styles from "./Kmen.module.css"
 import { getClient } from "../lib/data.js"
 
 const Kmen = async () => {
-  const clients = await getClient()
+  //const clients = await getClient()
 
   return (
     <div className={styles.container}>
