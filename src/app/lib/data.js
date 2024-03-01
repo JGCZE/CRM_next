@@ -1,30 +1,29 @@
 import { connectToDb } from "./utils";
 import { Client } from "./models";
-
-export const getOneClient = async (id) => {
-  try {
-    await connectToDb()
-    const oneClient = await Client.findById(id)
-    console.log("O2");
-    return oneClient;
-
-  } catch (error) {
-    console.log(error);
-    console.log("failed to fetch !!!!");
-    throw new Error("FAIL")
-  }
-}
+import { unstable_noStore as noStore } from "next/cache";
 
 export const getClient = async () => {
   try {
-    await connectToDb()
+    connectToDb()
     const client = await Client.find()
-    console.log("01");
     return client;
 
   } catch (error) {
     console.log(error);
-    console.log("failed to fetch !!!!");
-    throw new Error("FAIL")
+    throw new Error("FAIL from getClient")
   }
 }
+
+export const getOneClient = async (id) => {
+  noStore()
+  try {
+    connectToDb()
+    const oneClient = await Client.findById(id)
+    return oneClient;
+
+  } catch (error) {
+    console.log(error);
+    throw new Error("FAIL from getOneClient")
+  }
+}
+
