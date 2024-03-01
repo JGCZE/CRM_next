@@ -13,13 +13,11 @@ const Kmen = async () => {
       Kmen
       <Searchbar />
       <DescBar />
-      {clients.map((client) => (
-       
+      {clients.map((client) => ( 
           <Link key={client.id} href={`/kmen/${client._id}`} className={styles.links}>
             <OneClient client={client} className={styles.client} />
           </Link>
-      )
-      )}
+      ))}
     </div>
   )
 }
