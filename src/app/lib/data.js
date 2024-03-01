@@ -3,6 +3,7 @@ import { Client } from "./models";
 import { unstable_noStore as noStore } from "next/cache";
 
 export const getClient = async () => {
+  noStore()
   try {
     connectToDb()
     const client = await Client.find()

@@ -17,7 +17,7 @@ const SpecificClient = async ({ params }) => {
             <button className={styles.editBtn}>
               upravit
             </button>
-          <form action={deleteClient}>
+          <form >
             <button className={styles.deleteBtn}>
               odstranit
             </button>

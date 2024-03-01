@@ -3,10 +3,12 @@
 import { connectToDb } from "./utils";
 import { Client } from "./models";
 import { revalidatePath } from "next/cache";
+import { unstable_noStore as noStore } from "next/cache";
+
 
 export const addClient = async (client) => {
   const { name, rank, servis, zp, majetek, hypo, invj, invm, address } = Object.fromEntries(client);
-
+  noStore()
   try {
     await connectToDb()
     const newClient = new Client({ name, rank, servis, zp, majetek, hypo, invj, invm, address })
@@ -21,6 +23,7 @@ export const addClient = async (client) => {
 }
 
 export const deleteClient = async (formData) => {
+  noStore()
   const id = Object.fromEntries(formData)
 
   try {
