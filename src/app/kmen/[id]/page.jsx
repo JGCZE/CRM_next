@@ -1,6 +1,8 @@
 import { getOneClient } from "@/app/lib/data";
 import Link from "next/link";
 import styles from "./oneClient.module.css";
+import { deleteClient } from "@/app/lib/actions";
+import { handleClick } from "@/app/lib/actions";
 
 const SpecificClient = async ({ params }) => {
   const { id } = params;
@@ -12,12 +14,14 @@ const SpecificClient = async ({ params }) => {
       <div key={oneClient.id} className={styles.container}>
         <div className={styles.heading}>
           <p className={styles.name}>{name}</p>
-          <button className={styles.editBtn}>
-            upravit
-          </button>
-          <button className={styles.deleteBtn}>
-            odstranit
-          </button>
+            <button className={styles.editBtn}>
+              upravit
+            </button>
+          <form action={deleteClient}>
+            <button className={styles.deleteBtn}>
+              odstranit
+            </button>
+          </form>
         </div>
         <p>Poslední servis: {servis} </p>
         <p>život: {zp} / {Math.floor(zp * 0.1625)}bj</p>

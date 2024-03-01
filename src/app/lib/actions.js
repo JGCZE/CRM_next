@@ -20,6 +20,17 @@ export const addClient = async (client) => {
   }
 }
 
-export const deleteClient = async () => {
-  console.log("delete")
+export const deleteClient = async (formData) => {
+  const id = Object.fromEntries(formData)
+
+  try {
+    await connectToDb()
+    await Client.findByIdAndDelete(id)
+    console.log("Client deleted ");
+    revalidatePath("/kmen")
+  } catch (error) {
+    console.log(error);
+    console.log("failed to delete client !!!!");
+    throw new Error("FAIL")
+  }
 }
