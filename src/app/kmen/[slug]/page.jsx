@@ -2,8 +2,8 @@ import { getOneClient } from "@/app/lib/data";
 import styles from "./oneClient.module.css";
 
 const SpecificClient = async ({ params }) => {
-  const { id } = params;
-  const oneClient = await getOneClient(id);
+  const { slug } = params;
+  const oneClient = await getOneClient(slug);
 
   const { name, rank, servis, zp, majetek, hypo, invj, invm, address } = oneClient;
   return (

@@ -14,11 +14,11 @@ export const getClient = async () => {
   }
 }
 
-export const getOneClient = async (id) => {
+export const getOneClient = async (slug) => {
   noStore()
   try {
     connectToDb()
-    const oneClient = await Client.findById(id)
+    const oneClient = await Client.findById(slug)
     return oneClient;
 
   } catch (error) {
