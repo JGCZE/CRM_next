@@ -43,5 +43,18 @@ const clientSchema = new mongoose.Schema({
   },
 }, { timestamps: true})
 
+const userSchema = new mongoose.Schema({
+  username: {
+    type:String,
+    required:true,
+    unique: true,
+  },
+  password: {
+    type:String,
+    required:true,
+  },
+}, { timestamps: true})
 
-export const Client = mongoose.models.Client || mongoose.model("Client", clientSchema)
+
+export const Client = mongoose.models?.Client || mongoose.model("Client", clientSchema)
+export const User = mongoose.models?.User || mongoose.model("User", userSchema)

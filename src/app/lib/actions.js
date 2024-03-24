@@ -1,9 +1,9 @@
 "use server"
-
 import { connectToDb } from "./utils";
 import { Client } from "./models";
 import { revalidatePath } from "next/cache";
 import { unstable_noStore as noStore } from "next/cache";
+import { signIn, signOut } from "../lib/auth";
 
 
 export const addClient = async (client) => {
@@ -35,5 +35,21 @@ export const deleteClient = async (formData) => {
     console.log(error);
     console.log("failed to delete client !!!!");
     throw new Error("FAIL")
+  }
+}
+
+export const handleLogOut = async () => {
+  await signOut()
+}
+
+export const login = async (formData) => {
+  const { username, password } = 
+    Object.fromEntries(formData)
+
+  try {
+    await signIn("credentials", { username, password })
+  } catch (err){
+    console.log(err);
+    return { error: "something went wrong!"}
   }
 }

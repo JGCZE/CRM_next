@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+import { handleLogOut } from '@/app/lib/actions';
 
 const Navbar = () => {
   return (
@@ -14,6 +15,9 @@ const Navbar = () => {
 
       <div>
         <Link href="/login" className={styles.link}>Login</Link>
+        <form action={handleLogOut}>
+          <button>LOGOUT</button>
+        </form>
       </div>
     </div>
   )
