@@ -21,7 +21,6 @@ export const authConfig = {
     },
     authorized({ auth, request }) {
       const user = auth?.user;
-      //console.log("USER: ", user)
       const isOnKmen = request.nextUrl?.pathname.startsWith("/kmen");
       const isOnDiscussed = request.nextUrl?.pathname.startsWith("/discussed");
       //const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
