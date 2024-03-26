@@ -1,7 +1,7 @@
 import { Button } from "@radix-ui/themes";
 import { login } from "../../lib/actions";
 import styles from "./LoginPage.module.css";
-import { ArrowTopRightIcon } from '@radix-ui/react-icons'
+import { ArrowTopRightIcon, EnterIcon } from '@radix-ui/react-icons'
 
 const LoginPage = async () => {
   return (

@@ -21,7 +21,7 @@ export const authConfig = {
     },
     authorized({ auth, request }) {
       const user = auth?.user;
-      console.log(user)
+      //console.log("USER: ", user)
       const isOnKmen = request.nextUrl?.pathname.startsWith("/kmen");
       const isOnDiscussed = request.nextUrl?.pathname.startsWith("/discussed");
       //const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
@@ -33,13 +33,6 @@ export const authConfig = {
       if (isOnDiscussed && !user) {
         return false;
       }
-      // if (user) {
-      //   //go to home page
-      //   if (request.nextUrl?.pathname === "/") {
-      //     return true;
-      //   }
-      // }
-
        return true
      }
   }

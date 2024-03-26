@@ -40,6 +40,7 @@ export const deleteClient = async (formData) => {
 
 export const handleLogOut = async () => {
   await signOut()
+  return true
 }
 
 export const login = async (formData) => {
