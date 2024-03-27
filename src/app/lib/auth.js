@@ -4,6 +4,8 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import { connectToDb } from './utils';
 import { User } from './models';
 import { authConfig } from './auth.config';
+import { isRedirectError } from "next/dist/client/components/redirect";
+
 
 export const login = async (credentials) => {
   try {
@@ -12,9 +14,8 @@ export const login = async (credentials) => {
     if (!user || user.password !== credentials.password) {
       throw new Error('Invalid credentials');
     }
-
     return user;
-
+    
   } catch (error) {
     console.log(error);
     throw new Error('Login failed');
@@ -35,13 +36,14 @@ export const {
           const user = await login(credentials)
           return user;
         } catch (error) {
-          return null
+          if (isRedirectError(error)) {
+            throw error;
+        }
         }
       }
     })
   ],callbacks: {
     async signIn({ user, account, profile }) {
-      /* console.log(user, account, profile); */
       if (account.provider === "github") {
         connectToDb();
         try {

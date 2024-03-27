@@ -4,6 +4,7 @@ import { Client } from "./models";
 import { revalidatePath } from "next/cache";
 import { unstable_noStore as noStore } from "next/cache";
 import { signIn, signOut } from "../lib/auth";
+import { redirect } from "next/navigation";
 
 
 export const addClient = async (client) => {
@@ -30,7 +31,7 @@ export const deleteClient = async (formData) => {
     await connectToDb()
     await Client.findByIdAndDelete(id)
     console.log("Client deleted ");
-    revalidatePath("/kmen")
+    //revalidatePath("/kmen")
   } catch (error) {
     console.log(error);
     console.log("failed to delete client !!!!");
@@ -45,12 +46,16 @@ export const handleLogOut = async () => {
 
 export const login = async (formData) => {
   const { username, password } = 
-    Object.fromEntries(formData)
-
+  Object.fromEntries(formData)
+  
   try {
     await signIn("credentials", { username, password })
   } catch (err){
-    console.log(err);
-    return { error: "something went wrong!"}
+    if (isRedirectError(err)) {
+      console.error(err);
+      throw err;
+    }
+  } finally {
+    redirect("/kmen")
   }
 }

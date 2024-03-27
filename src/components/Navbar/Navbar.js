@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import { handleLogOut } from '@/app/lib/actions';
+import { redirect } from 'next/navigation';
 
 const Navbar = () => {
-
   return (
     <div className={styles.container}>
       <div className={styles.links}>
