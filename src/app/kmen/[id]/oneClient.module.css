@@ -1,5 +1,9 @@
+.section {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .container {
-  width: 80%;
   margin: 30px auto;
 }
 
@@ -37,9 +41,33 @@
   cursor: pointer;
 }
 
+.overview {
+  width: 350px;
+}
+
+.overview p {
+  margin: 15px 0;
+  padding: 6px;
+  display: flex;
+  border-bottom: 1px solid rgba(226, 225, 225, 0.699);
+  justify-content: space-between;
+}
+
+.overview span {
+  margin-left: 30px;
+  width: 50%; /* Šířka pro <span> */
+  text-align: right; /* Text zarovnán vpravo */
+}
+
+
+.notesInput {
+  margin: 30px 0;
+  width: 400px;
+  height: 80px;
+}
+
 .backBtn {
   padding: 10px 30px;
-  margin-left: 10%;
   background-color: rgb(5, 5, 81);
   color: white;
   font-size: 16px;

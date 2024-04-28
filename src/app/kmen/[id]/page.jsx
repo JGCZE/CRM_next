@@ -10,7 +10,7 @@ const SpecificClient = async ({ params }) => {
 
   const { name, rank, servis, zp, majetek, hypo, invj, invm, address } = oneClient;
   return (
-    <div>
+    <div className={styles.section}>
       <div key={oneClient.id} className={styles.container}>
         <div className={styles.heading}>
           <p className={styles.name}>{name}</p>
@@ -23,15 +23,32 @@ const SpecificClient = async ({ params }) => {
             </button>
           </form>
         </div>
-        <p>Poslední servis: {servis} </p>
-        <p>život: {zp} / {Math.floor(zp * 0.1625)}bj</p>
-        <p>{address}</p>
-        <p>{rank}</p>
-        <p>{majetek}</p>
-        <p>{hypo}</p>
-        <p>{invj}</p>
-        <p>{invm}</p>
+        <div className={styles.overview}>
+          <p> Poslední servis: <span> {servis}  </span> </p>
+          <p>Adresa: <span>{address} </span> </p>
+          <p>Rank: <span>{rank}</span></p>
+          <br />
+          <p> Život: <span> {zp} / {Math.floor(zp * 0.1625)}bj </span></p>
+          <p>Neživot: <span>{majetek}</span></p>
+          <br />
+          <p>Úvěr: <span>{hypo}</span> </p>
+          <p>Inv. jednoráz: <span>{invj}</span> </p>
+          <p>Inv. pravidelná: <span>{invm}</span> </p>
+        </div>
       </div>
+
+      <div className={styles.notesSection}>
+        <textarea 
+          type="text" 
+          placeholder="přidat poznámku..." 
+          className={styles.notesInput} 
+          rows="5" 
+          cols="40"  
+       >
+       </textarea>
+       <button>přidat</button>
+      </div>
+
       <Link href="/kmen" className={styles.backBtn}>
          Zpět
       </Link>
