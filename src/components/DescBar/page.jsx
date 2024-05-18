@@ -10,11 +10,12 @@ const DescBar = () => {
       <div className={styles.descWrapper}>
         <span>rank</span>
         <span>servis</span>
+        <span>servisní termín</span>
         <span>žp</span>
-        <span>majetek</span>
-        <span>hypo</span>
+        <span>adresa</span>
+        {/* <span>hypo</span>
         <span>INV - j</span>
-        <span>INV - m</span>
+        <span>INV - m</span> */}
       </div>
     </div>
   )
